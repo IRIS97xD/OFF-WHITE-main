@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Andada Pro", serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: red;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+li {
+  list-style: none;
+}
+
+div > a > img {
+  transition: 0.5s;
+}
+.div > a > img:hover {
+  transform: translateY(-15px);
+}
+
+/* navbar */
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: ghostwhite;
+}
+
+.navbar_logo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5%;
+}
+
+.navbar_logo img {
+  width: 10%;
+}
+
+.navbar_logo a {
+  padding: 8px;
+  font-size: 1em;
+}
+
+.navbar_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.navbar_menu li {
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.navbar_menu li a:hover {
+  border-bottom: 1px dotted black;
+}
+
+.navbar_menu li a {
+  font-size: 0.9em;
+  padding: 8px 12px;
+}
+
+.navbar_menu #li4 {
+  color: lightblue;
+}
+
+.navbar_menu #li5 {
+  color: lightcoral;
+}
+
+.navbar .icons {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar_btn {
+  display: none;
+}
+
+.dropdown {
+  background-color: ghostwhite;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  width: 102.5%;
+  height: auto;
+  top: 7%;
+  z-index: 1;
+}
+.navbar_menu:hover .dropdown {
+  display: flex;
+}
+.dropdown ul {
+  width: 8%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5%;
+}
+.dropdown ul li {
+  padding: 6px 0px;
+  width: 100%;
+  text-align: left;
+}
+.dropdown ul li a {
+  float: left;
+  font-size: 0.7vw;
+  padding: 6px 0px;
+}
+
+/* Content */
+.content {
+  width: 100%;
+}
+
+.content_text {
+  font-size: 14px;
+  margin-top: 200px;
+  margin-left: 20px;
+}
+
+.content_imgs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.content_imgs img {
+  padding: 40px 12px;
+}
+
+.content_imgs h5 {
+  position: relative;
+  left: 20px;
+  top: -40px;
+}
+
+.content_imgs p {
+  font-size: 13px;
+  position: relative;
+  left: 20px;
+  top: -35px;
+}
+
+/* footer */
+#sitefooter {
+  width: 100%;
+  position: relative;
+  top: 330px;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.list ul {
+  margin: 0;
+}
+
+.list ul li {
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 8px;
+}
+
+.f_text {
+  font-size: 14px;
+  margin-left: 6%;
+}
+
+.f_text p {
+  padding-bottom: 100px;
+}
+
+.icons {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+}
+
+.icons > i {
+  padding: 12px;
+  margin: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    max-width: 99%;
+  }
+
+  .navbar_menu {
+    width: 100%;
+    display: none;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .navbar_logo {
+    margin-left: 42%;
+  }
+  .navbar_menu li a {
+    font-size: 16px;
+  }
+  .navbar_btn {
+    display: block;
+    padding: 8px 12px;
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  .icons i {
+    display: none;
+  }
+  .content_text {
+    text-align: center;
+  }
+  .content_text {
+    margin-top: 100px;
+  }
+  .content {
+    width: 100%;
+  }
+  .content_imgs {
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .content_imgs img {
+    width: 95%;
+  }
+
+  #sitefooter {
+    width: 100%;
+  }
+  .list {
+    width: 100%;
+    justify-content: center;
+  }
+  .icons {
+    display: none;
+  }
+  .list ul li {
+    margin: 0;
+  }
+  .list li a {
+    font-size: 12px;
+  }
+  .f_text {
+    margin: 0;
+    text-align: center;
+  }
+  .f_text p {
+    margin-top: 20%;
+  }
+  .navbar_menu.active,
+  .icons.active {
+    display: flex;
+  }
+}
